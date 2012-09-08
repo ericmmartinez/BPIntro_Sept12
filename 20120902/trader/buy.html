@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="css/trader.css"/>
+	<link rel="stylesheet" type="text/css" href="css/buy.css"/>
 
 	<script src="js/html5shiv.js"></script>
 </head>
@@ -32,15 +33,27 @@
 		</nav>
 
 		<div id="site-content">
-			<h1>Page Title</h1>
-			<p>
-				First, I believe that this nation should commit itself to
-				achieving the goal, before this decade is out, of landing a man
-				on the moon and returning him safely to the earth. No single
-				space project in this period will be more impressive to mankind,
-				or more important for the long-range exploration of space; and
-				none will be so difficult or expensive to accomplish.
-			</p>
+			<h1>Buying Gold</h1>
+			<p>Rates: $150.00 / <abbr title="Kilograms">Kg</abbr></p>
+			<form method="get" action="buy-end.html" name="frmbuy" id="frmbuy">
+				<ol>
+					<li class="ammount">
+						<label for="ammount">
+							Ammount
+							<span class="help">
+								in <abbr title="Kilograms">Kg</abbr>
+							</span>
+						</label>
+						<input type="number" step="1" name="ammount"
+								id="ammount"/>
+					</li>
+					<li class="actions">
+						<input type="submit" id="submit" name="submit"
+								value="Buy"/>
+						<a id="form_cancel" href="index.html">Cancel</a>
+					</li>
+				</ol>
+			</form>
 		</div>
 
 	</div>

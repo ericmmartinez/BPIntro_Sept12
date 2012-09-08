@@ -1,0 +1,26 @@
+form ol {
+	margin:0;padding:0;
+	list-style:none;
+}
+form li {
+	margin:0 0 8px;padding:0;
+}
+form ol label {
+	display:block;
+	float:left;
+	width:80px;
+	margin-right:16px;
+	font-weight:bold;
+}
+form #ammount, form select {
+	width:80px;
+}
+form .actions {
+	padding-left:96px;
+	line-height:1.0;
+}
+form .actions input, form.actions a {
+	display:block;
+	float:left;
+	margin-right:8px;
+}

@@ -45,14 +45,14 @@ body {padding:8px; background-color:#FFEF99;}
 	margin:0 0 2px 0;
 	padding:2px;
 	text-indent:8px;
-	color:#FFF;
+	color:#EEE;
 }
 #site-navigation li.section {
 	border-bottom:2px solid #333;
 	margin-bottom:1px;
 }
 #site-navigation li a {
-	color:#EEE;
+	color:#FFF;
 	text-decoration:none;
 }
 
@@ -67,4 +67,10 @@ body {padding:8px; background-color:#FFEF99;}
 
 li > a {
 	display:block;
+}
+.offsite {
+	background-color:transparent;
+	background-image:url('../images/offsite.png');
+	background-repeat:no-repeat;
+	background-position:100% 50%;
 }

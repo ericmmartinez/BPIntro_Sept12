@@ -1,0 +1,18 @@
+#tblrates {
+	margin:0 0 1em 0;
+}
+
+#tblrates th, #tblrates td {
+	padding:3px 10px;
+	border:1px solid #FFF;
+}
+
+#tblrates th {
+	text-align:left;
+	background-color:#ccc;
+	font-weight:bold;
+}
+
+#tblrates td {
+	background-color:#eee;
+}

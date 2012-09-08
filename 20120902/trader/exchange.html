@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="css/trader.css"/>
+	<link rel="stylesheet" type="text/css" href="css/exchange.css"/>
 
 	<script src="js/html5shiv.js"></script>
 </head>
@@ -32,15 +33,36 @@
 		</nav>
 
 		<div id="site-content">
-			<h1>Page Title</h1>
-			<p>
-				First, I believe that this nation should commit itself to
-				achieving the goal, before this decade is out, of landing a man
-				on the moon and returning him safely to the earth. No single
-				space project in this period will be more impressive to mankind,
-				or more important for the long-range exploration of space; and
-				none will be so difficult or expensive to accomplish.
-			</p>
+			<h1>Exchange Currencies</h1>
+			<form method=get" action="exchange-end.html" name="frmexchange">
+				<ol>
+					<li class="ammount">
+						<label for="ammount">Ammount</label>
+						<input type="number" step="0.01" name="ammount"
+								id="ammount"/>
+					</li>
+					<li class="fromcurrency">
+						<label for="fromcurrency">From</label>
+						<select name="fromcurrency" id="fromcurrency">
+							<option value="us">US $</option>
+							<option value="euro">Euro &euro;</option>
+							<option value="yen">Yens &yen;</option>
+						</select>
+					</li>
+					<li class="tocurrency">
+						<label for="tocurrency">To</label>
+						<select name="tocurrency" id="tocurrency">
+							<option value="us">US $</option>
+							<option value="euro">Euro &euro;</option>
+							<option value="yen">Yens &yen;</option>
+						</select>
+					</li>
+					<li class="actions">
+						<input type="submit" name="submit" value="Proceed"/>
+						<a id="cancel_form" href="index.html">Cancel</a>
+					</li>
+				</ol>
+			</form>
 		</div>
 
 	</div>

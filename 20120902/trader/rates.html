@@ -8,6 +8,7 @@
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="css/trader.css"/>
+	<link rel="stylesheet" type="text/css" href="css/rates.css"/>
 
 	<script src="js/html5shiv.js"></script>
 </head>
@@ -32,15 +33,55 @@
 		</nav>
 
 		<div id="site-content">
-			<h1>Page Title</h1>
-			<p>
-				First, I believe that this nation should commit itself to
-				achieving the goal, before this decade is out, of landing a man
-				on the moon and returning him safely to the earth. No single
-				space project in this period will be more impressive to mankind,
-				or more important for the long-range exploration of space; and
-				none will be so difficult or expensive to accomplish.
-			</p>
+			<h1>Rates</h1>
+			<table cellspacing="0" cellpadding="0" border="0" id="tblrates">
+				<thead>
+					<tr>
+						<th>&nbsp;</th> <!-- Placeholder -->
+						<th scope="col" class="euro">Euro &euro;</th>
+						<th scope="col" class="us">US $</th>
+						<th scope="col" class="yen">Yen &yen;</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th scope="row" class="euro">Euro &euro;</th>
+						<td class="euro">&nbsp;</td>
+						<td class="us">
+							1 Euro = 1.50 US$<br/>
+							1 US $ = 0.66 Euro
+						</td>
+						<td class="yen">
+							1 Euro = 130 Yens<br/>
+							1 Yen = 0.008 Euro
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="us">US $</th>
+						<td class="euro">
+							1 US$ = 0.66 Euro<br/>
+							1 Euro = 1.50 US $
+						</td>
+						<td class="us">&nbsp;</td>
+						<td class="yen">
+							1 US $ = 85 Yens<br/>
+							1 Yen = 0.012 US $
+						</td>
+					</tr>
+					<tr>
+						<th scope="row" class="yen">Yen &yen;</th>
+						<td class="euro">
+							1 Yen = 0.008 Euro<br/>
+							1 Euro = 130 Yens
+						</td>
+						<td class="us">
+							1 Yen = 0.0012 US $<br/>
+							1 US $ = 85 Yens
+						</td>
+						<td class="yen">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
 	</div>
