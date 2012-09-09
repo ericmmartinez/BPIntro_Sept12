@@ -4,6 +4,7 @@
 <!--[if IE 8]>         <html class="ie8"> <![endif]-->
 <!--[if gt IE 8]><!--> <html>         <!--<![endif]-->
 <head>
+	<meta charset="utf-8"/>
 	<title>Gold and Currencies Trader Inc</title>
 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
@@ -34,54 +35,17 @@
 
 		<div id="site-content">
 			<h1>Rates</h1>
-			<table cellspacing="0" cellpadding="0" border="0" id="tblrates">
-				<thead>
-					<tr>
-						<th>&nbsp;</th> <!-- Placeholder -->
-						<th scope="col" class="euro">Euro &euro;</th>
-						<th scope="col" class="us">US $</th>
-						<th scope="col" class="yen">Yen &yen;</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row" class="euro">Euro &euro;</th>
-						<td class="euro">&nbsp;</td>
-						<td class="us">
-							1 Euro = 1.50 US$<br/>
-							1 US $ = 0.66 Euro
-						</td>
-						<td class="yen">
-							1 Euro = 130 Yens<br/>
-							1 Yen = 0.008 Euro
-						</td>
-					</tr>
-					<tr>
-						<th scope="row" class="us">US $</th>
-						<td class="euro">
-							1 US$ = 0.66 Euro<br/>
-							1 Euro = 1.50 US $
-						</td>
-						<td class="us">&nbsp;</td>
-						<td class="yen">
-							1 US $ = 85 Yens<br/>
-							1 Yen = 0.012 US $
-						</td>
-					</tr>
-					<tr>
-						<th scope="row" class="yen">Yen &yen;</th>
-						<td class="euro">
-							1 Yen = 0.008 Euro<br/>
-							1 Euro = 130 Yens
-						</td>
-						<td class="us">
-							1 Yen = 0.0012 US $<br/>
-							1 US $ = 85 Yens
-						</td>
-						<td class="yen">&nbsp;</td>
-					</tr>
-				</tbody>
-			</table>
+			<dl class="rates">
+				<dt>1.00 Euro</dt>
+					<dd>&rarr; 1.50 US $</dd>
+					<dd>&rarr; 130 Yens</dd>
+				<dt>1.00 US $</dt>
+					<dd>&rarr; 0.66 Euro</dd>
+					<dd>&rarr; 85 Yens</dd>
+				<dt>1 Yen</dt>
+					<dd>&rarr; 0.008 Euro</dd>
+					<dd>&rarr; 0.0012 US $</dd>
+			</dl>
 		</div>
 
 	</div>

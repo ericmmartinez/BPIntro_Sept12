@@ -55,6 +55,9 @@ body {padding:8px; background-color:#FFEF99;}
 	color:#FFF;
 	text-decoration:none;
 }
+#site-navigation li a:hover {
+	text-decoration:underline;
+}
 
 #site-content {
 	float:left;

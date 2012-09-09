@@ -1,18 +1,12 @@
-#tblrates {
-	margin:0 0 1em 0;
-}
-
-#tblrates th, #tblrates td {
-	padding:3px 10px;
-	border:1px solid #FFF;
-}
-
-#tblrates th {
-	text-align:left;
-	background-color:#ccc;
+.rates dt {
+	color:#222;
 	font-weight:bold;
+	margin-top:16px;
 }
-
-#tblrates td {
-	background-color:#eee;
+.rates dt:first-child {
+	margin-top:0;
+}
+.rates dd {
+	color:#444;
+	font-size:.95em;
 }
