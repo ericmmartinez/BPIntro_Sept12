@@ -5,7 +5,7 @@
 			margin: 0 auto;
 			width: 1000px;
 		}		
-		#header {
+		header {
                         color: white;
                         background-image:url("beethoven-background.jpg");
                         background-position: bottom right;
@@ -16,7 +16,7 @@
 			padding: 20px;
                         padding-bottom:0;
 		}
-		#sidebar {
+		nav {
 			background-color:#baa;
 			border: 1px solid black;
 			width: 200px;
@@ -33,7 +33,7 @@
 			border: 1px solid black;
 			padding: 20px;
 		}
-		#footer {
+		footer {
 			background-color:white;
 			margin: 20px 20px 0 20px;
 			padding: 20px;
@@ -41,13 +41,52 @@
 			clear: left;
 		}
 
-
-thead th {
-   background-color:#bfb;
-   text-align:center;
+.symphonies .header {
+	display:none;
 }
-
-th, td {
-  border: thin gray dotted;
-  padding: 0.5em;
+.symphonies dt {
+	font-weight:bold;
+	color:#333;
+	margin-top:.25em;
+}
+.symphonies dt:first-child {
+	margin-top:0;
+}
+@media screen and (min-width:480px) {
+/* Clears the floatingness of the list for subsequent content. */
+.symphonies:after {
+	content:'';
+	display:block;
+	clear:left;
+	margin:0;padding:0;height:0;width:0;
+}
+.symphonies dt, dd {
+	display:block;
+	float:left;
+	border:1px solid #EEE;
+	padding:.25em;
+	margin:0 .25em .25em 0;
+}
+.symphonies dt {
+	clear:left;
+	width:12em;
+	background-image:url('music.png');
+	background-position:1px 1px;
+	background-repeat:no-repeat;
+	padding-left:25px;
+}
+.symphonies .tone {
+	width:6em;
+}
+.symphonies dd {
+	width:4em;
+}
+.symphonies .header {
+	display:block;
+	background:none;
+	background-color:#bfb;
+	font-weight:bold;
+	color:#000;
+	text-align:center;
+}
 }
