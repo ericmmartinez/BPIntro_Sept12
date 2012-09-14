@@ -1,61 +1,157 @@
-html, body { background-color:black;}
-body { padding-bottom: 20px; text-align: center; }
-#container {
-	text-align: left;
-	margin: 0 auto;
-	width: 1000px;
-}		
-header {
-	color: white;
-	background-image:url("../images/beethoven-background.jpg");
-	background-position: bottom right;
-	background-repeat: no-repeat;
-	background-color:black;
-	border: 1px solid black;
-	margin: 20px;
-	padding: 20px;
-	padding-bottom:0;
+html {font-size:18px;}
+body {
+	padding:.25em;
+	background-color:#000;
 }
-nav {
-	background-color:#baa;
-	border: 1px solid black;
-	width: 200px;
-	margin-left: 20px;
-	padding-right:1em;
-	float: left;
-	/**
-	 * Floats are handled as block elements, this is to fix a margin collapsing
-	 * bug in IE
-	 */
-	display: inline;
+header {
+	background-image:url('../images/beethoven-background.jpg');
+	background-position:100% 50%;
+	background-repeat:no-repeat;
+	margin-bottom:.25em;
+}
+header h1 {
+	font-size:2em;
+	line-height:1em;
+	margin:0;
+	color:#fff;
+}
+header h1 .extended {
+	display:none;
+}
+header .navigate {
+	display:block;
+	float:right;
+	margin:1em;
+	color:#fff;
 }
 #content {
-	background-color:white;
-	margin-left: 242px;
-	margin-right: 20px;
-	border: 1px solid black;
-	padding: 20px;
+	clear:both;
+	background-color:#fff;
+	padding:.5em;
 }
-footer {
-	background-color:white;
-	margin: 20px 20px 0 20px;
-	padding: 20px;
-	border: 1px solid black;
-	clear: left;
+#symphonies {
+	clear:both;
 }
-
+.imgwrapper {
+	margin:0 auto;
+	padding:0;
+	max-width:320px;
+}
+.imgwrapper img {
+	width:100%;
+}
+#content blockquote {
+	margin:0 auto;padding:0;
+}
+#content blockquote p:first-child {
+	margin-top:0;
+}
 .symphonies .header {
 	display:none;
 }
 .symphonies dt {
 	font-weight:bold;
-	color:#333;
+	color:#222;
 	margin-top:.25em;
 }
 .symphonies dt:first-child {
 	margin-top:0;
 }
-@media screen and (min-width:480px) {
+.symphonies dd {
+	color:#444;
+	font-size:.95em;
+}
+.symphonies dd:before {
+	font-weight:bold;
+}
+.symphonies .opus:before {
+	content:'Opus: ';
+}
+.symphonies .tone:before {
+	content:'Tone: ';
+}
+.symphonies .year:before {
+	content:'Year: ';
+}
+nav {
+	margin:.25em 0;
+	background-color:#baa;
+}
+nav h2 {
+	margin:0; padding:0;
+}
+nav ul {
+	list-style-position:inside;
+	margin:0;
+	padding:0;
+}
+nav ul li {
+	margin:.25em 0;
+	padding:0;
+}
+nav ul li a {
+	display:block;
+	padding:.25em;
+}
+nav ul li ul {
+	margin-left:1em;
+}
+footer {
+	background-color:#fff;
+	margin:.25em 0;
+	padding:.25em;
+	color:#666;
+	font-size:.9em;
+	line-height:.9em;
+}
+footer p {
+	margin:0; padding:0;
+}
+@media screen and (min-width:720px) {
+html {font-size:16px;}
+#container {
+	max-width:800px;
+	margin:0 auto;
+}
+header {
+	padding:.5em 0;
+}
+header h1 .extended {
+	display:inline;
+}
+header .navigate {
+	display:none;
+}
+#content {
+	width:73.5%;
+	margin-left:.25%;
+	float:right;
+}
+nav {
+	width:23.5%;
+	margin-top:0;
+	margin-right:.25%;
+	float:left;
+}
+nav ul {
+	font-size:.9em;
+	list-style:none;
+}
+nav ul li a {
+	padding:.1em;
+}
+nav ul ul {
+	list-style:disc;
+	list-style-position:inside;
+}
+blockquote {
+	float:left;
+}
+.imgwrapper {
+	float:right;
+	margin:0;
+	width:50%;
+}
 /* Clears the floatingness of the list for subsequent content. */
 .symphonies:after {
 	content:'';
@@ -78,6 +174,11 @@ footer {
 	background-repeat:no-repeat;
 	padding-left:25px;
 }
+.symphonies .opus:before,
+.symphonies .tone:before,
+.symphonies .year:before {
+	content:'';
+}
 .symphonies .tone {
 	width:6em;
 }
@@ -92,4 +193,16 @@ footer {
 	color:#000;
 	text-align:center;
 }
+footer {
+	float:left;
+	clear:both;
+	display:block;
+	width:100%;
+	padding-right:0;
+	padding-left:0;
 }
+footer p {
+	margin:.25em;
+}
+}
+/**/
