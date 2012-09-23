@@ -19,9 +19,13 @@ var updateImage = function (evt) {
 	if (width >= 320 && src.indexOf('320') < 0) {
 		// Screen is wide enough, but image does not reference larger version
 		theImage.src = 'images/beethoven-320.jpg';
+		theImage.width = '320';
+		theImage.height = '399';
 	} else if (src.indexOf('120') < 0) {
 		// Small screen is using large image. Reset.
 		theImage.src = 'images/beethoven-120.jpg';
+		theImage.width = '120';
+		theImage.height = '150';
 	}
 };
 
