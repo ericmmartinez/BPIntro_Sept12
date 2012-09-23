@@ -36,6 +36,9 @@ body {padding:8px; background-color:#FFEF99;}
 	width:224px;
 	margin-right:16px;
 }
+#site-navigation h2 {
+	margin-top:0;
+}
 #site-navigation ul {
 	margin:0;padding:0;
 }
@@ -54,9 +57,14 @@ body {padding:8px; background-color:#FFEF99;}
 #site-navigation li a {
 	color:#FFF;
 	text-decoration:none;
+	-webkit-transition:all .1s ease;
+	-moz-transition:all .1s ease;
+	-o-transition:all .1s ease;
+	transition:all .1s ease;
 }
 #site-navigation li a:hover {
 	text-decoration:underline;
+	text-indent:1em;
 }
 
 #site-content {

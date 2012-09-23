@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Combine files
+cat normalize.css trader.css > trader.combined.css
+cat normalize.css trader.css buy.css > buy.combined.css
+cat normalize.css trader.css exchange.css > exchange.combined.css
+cat normalize.css trader.css index.css > index.combined.css
+cat normalize.css trader.css rates.css > rates.combined.css
+
+# Minify files
+java -jar ~/bin/yuicompressor-2.4.7.jar -o trader.min.css trader.combined.css
+java -jar ~/bin/yuicompressor-2.4.7.jar -o buy.min.css buy.combined.css
+java -jar ~/bin/yuicompressor-2.4.7.jar -o exchange.min.css exchange.combined.css
+java -jar ~/bin/yuicompressor-2.4.7.jar -o index.min.css index.combined.css
+java -jar ~/bin/yuicompressor-2.4.7.jar -o rates.min.css rates.combined.css
+
+rm *combined.css
+
+exit 0;
