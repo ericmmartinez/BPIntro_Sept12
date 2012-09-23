@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} ^/(.*)/([^/]+).css$
+RewriteCond %{DOCUMENT_ROOT}/%1/%2.min.css -f
+RewriteRule ^(.+)$ /%1/%2.min.css [L,PT]
