@@ -19,7 +19,7 @@ html, body, #wrapper {
 #wrapper {
 	width:100%;
 	overflow:hidden;
-	background-color:#E4B388;
+	background-color:#90916F;
 	color:#0F0E13;
 }
 #header {
@@ -55,7 +55,7 @@ html, body, #wrapper {
 	margin-left:-100%;
 	float:left;
 	z-index:2;
-	background-color:#E4B388;
+	background-color:#90916F;
 }
 .js #navigation ul {
 	list-style:none;
@@ -77,9 +77,9 @@ html, body, #wrapper {
 }
 .js #complimentary {
 	margin-right:-200%;
-	float:left;
+	float:right;
 	z-index:2;
-	background-color:#E4B388;
+	background-color:#90916F;
 }
 .js #complimentary a {
 	display:block;
@@ -97,9 +97,8 @@ html, body, #wrapper {
 	float:left;
 	width:4em;
 	margin-right:1em;
-	color:#90916F;
-	font-weight:bold;
-	font-size:.9em;
+	color:#FFFFF0;
+	font-size:.8em;
 }
 .js #complimentary dt {
 	font-weight:bold;
@@ -126,7 +125,7 @@ html, body, #wrapper {
 	margin-right:-100%;
 }
 .active-nav #complimentary {
-	margin-right:-100%;
+	margin-right:-200%;
 	float:right;
 }
 
@@ -138,6 +137,7 @@ html, body, #wrapper {
 	margin-left:-90%;
 }
 .active-sidebar #complimentary {
+	float:left;
 	margin-left:0;
 	width:80%;
 }
@@ -151,8 +151,8 @@ html, body, #wrapper {
 	float:left;
 	margin:0; padding:0;
 	list-style:none;
-	/*background-color:#0F0E13;*/
 	background-color:#90916F;
+	border-bottom:1px solid #0F0E13;
 	width:100%;
 }
 #navigation-top ul li {
@@ -169,13 +169,9 @@ html, body, #wrapper {
 	padding:.5em 1em;
 	color:#0F0E13;
 	background-color:#90916F;
-	border-bottom:1px solid #0F0E13;
-	border-bottom:1px solid #90916F;
 }
 .active-nav #navigation-top .navigation-item a,
 .active-sidebar #navigation-top .sidebar-item a {
-	background-color:#E4B388;
-	border-bottom:1px solid #E4B388;
 }
 
 
@@ -185,7 +181,7 @@ html, body, #wrapper {
  */
 @media screen and (min-width:600px) {
 	#header h1 {
-		padding-left:.5em;
+		padding:.25em 0 .25em .5em;
 	}
 	#header h1 .extended {
 		display:inline;
@@ -199,6 +195,7 @@ html, body, #wrapper {
 	}
 	.js #main {
 		width:60%;
+		padding-bottom:10em;
 	}
 	.js #complimentary {
 		width:20%;
