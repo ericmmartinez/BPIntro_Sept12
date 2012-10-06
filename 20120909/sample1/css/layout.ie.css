@@ -1,0 +1,24 @@
+.ie .wrapper .medium {
+	display:none;
+}
+.ie .wrapper .column  {
+	float:left;
+}
+.ie .wrapper .main {
+	width:384px;
+}
+
+.ie .wrapper {
+	width:800px;
+}
+.ie .wrapper .page-navigation {
+	display:none;
+}
+.ie .wrapper .left,
+.ie .wrapper .right {
+	width:184px;
+}
+.ie .wrapper .inner-wrapper {
+	float:right;
+	width:600px;
+}

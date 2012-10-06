@@ -1,0 +1,89 @@
+/**
+ * Development styles. Remove for production.
+ * /
+.wrapper, .header, .page-navigation, .column {min-height:500px;min-width:100px;}
+.header, .page-navigation {min-height:100px;}
+body {background-color:#F00;}
+.wrapper {background-color:#0F0;}
+.header {background-color:#000;}
+.page-navigation {background-color:#F0F;}
+.left {background-color:#00F;}
+.main {background-color:#FF0;}
+.right {background-color:#0FF;}
+
+@import url('/css/normalize.css');
+
+/**
+ * Default (mobile first layout).
+ *
+ * Content is stacked vertically.
+ */
+
+body {
+	margin:0;
+	padding:0;
+}
+
+.wrapper {
+	display:block;
+	margin:0 auto;
+}
+
+.wrapper .header, .wrapper .column, .wrapper .page-navigation {
+	display:block;
+	margin:0;
+	padding:8px;
+}
+
+
+/**
+ * Layout for medium sized screens.
+ *
+ * - Left column appears on left (narrow).
+ * - Main column appears on right (wider).
+ * - Right column appears on bottom (spans columns above).
+ */
+@media screen and (min-width:600px) {
+	.wrapper {
+		width:600px;
+	}
+	.wrapper .medium {
+		display:none;
+	}
+	.wrapper .column  {
+		float:left;
+	}
+	.wrapper .right {
+		width:184px;
+	}
+	.wrapper .main {
+		width:384px;
+	}
+	.wrapper .left {
+		width:584px;
+	}
+}
+
+/**
+ * Layout for larger screens.
+ *
+ * - Left column appears on left (narrow).
+ * - Main column appears in middle (wider).
+ * - Right column appears on right (narrow).
+ */
+@media screen and (min-width:800px) {
+	.wrapper {
+		width:800px;
+	}
+	.wrapper .page-navigation {
+		display:none;
+	}
+	.wrapper .left,
+	.wrapper .right {
+		width:184px;
+	}
+	.wrapper .inner-wrapper {
+		float:right;
+		width:600px;
+	}
+}
