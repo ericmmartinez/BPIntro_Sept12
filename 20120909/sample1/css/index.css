@@ -5,241 +5,128 @@
 /* .peach { #E4B388; } */
 
 @import url('/css/normalize.css');
+@import url('layout.css');
+.totop { display:block; text-align:right; }
 
-/**
- * Off-Canvas layout credit:
- *     http://jasonweaver.name/lab/offcanvas/
- */
-
-html, body, #wrapper {
-	font-size:18px;
+.header {
 	background-color:#0F0E13;
-	color:#FFFFF0;
-}
-#wrapper {
-	width:100%;
-	overflow:hidden;
-	background-color:#90916F;
-	color:#0F0E13;
-}
-#header {
-	background-color:#0F0E13;
-	color:#FFFFF0;
 	background-image:url('../images/beethoven-background.jpg');
 	background-position:100% 50%;
 	background-repeat:no-repeat;
-	border-bottom:1px solid #0F0E13;
+	border-bottom:2px solid #90916F;
 }
-#header h1 {
-	margin:0;
+.header h1 {
+	color:#FFFFF0;
+	margin:0; padding:0;
 }
-#header h1 .extended {
+.header h1 .extended {
 	display:none;
 }
 
-#navigation, #main, #complimentary {
-	display:block;
-	position:relative;
-	width:90%;
-	padding:5%;
-
-	-webkit-transition:.2s all ease;
-	-moz-transition:.2s all ease;
-	-o-transition:.2s all ease;
-	-ms-transition:.2s all ease;
-	transition:.2s all ease;
-}
-
-/* JS enabled. Default styles, center on content. */
-.js #navigation {
-	margin-left:-100%;
+.wrapper .page-navigation {
 	float:left;
-	z-index:2;
-	background-color:#90916F;
+	width:100%;
+	padding:8px 0;
+	border-bottom:2px solid #90916F;
 }
-.js #navigation ul {
-	list-style:none;
+.page-navigation ul {
 	margin:0;padding:0;
-}
-.js #navigation li {
 	list-style:none;
-	margin:.5em 0;
 }
-.js #navigation a:hover {
-	color:#B43A2F;
-}
-.js #main {
-	margin-left:0;
-	float:left;
-	z-index:1;
-	background-color:#FFFFF0;
-	padding-bottom:5em;
-}
-.js #complimentary {
-	margin-right:-200%;
-	float:right;
-	z-index:2;
-	background-color:#90916F;
-}
-.js #complimentary a {
+.page-navigation li {
 	display:block;
-	text-indent:-9999px;
-	font-size:0;
-	margin:0 auto; padding:0;
+	float:left;
+	margin:0 8px 0 0;
+	padding:0 0 0 8px;
+	border-left:2px solid #90916F;
+}
+.page-navigation li:first-child {border-left:none;}
+.page-navigation a {
+	display:block;
+	float:none;
+}
+
+.inner-wrapper {
+	clear:both;
+}
+#main p:first-child {margin-top:0;}
+
+.right {
+	border-top:1px solid #90916F;
+	border-bottom:1px solid #90916F;
+}
+#symphonies .image {
+	display:block;
 	width:120px;
-	height:150px;
-	background-image:url('../images/beethoven-120.jpg');
-	background-position:0 0;
-	background-repeat:no-repeat;
+	margin:0 auto;
+	padding:0;
 }
-.js #complimentary dd:before {
-	display:block;
-	float:left;
-	width:4em;
-	margin-right:1em;
-	color:#FFFFF0;
-	font-size:.8em;
-}
-.js #complimentary dt {
+#symphonies dt {
 	font-weight:bold;
+	margin-top:.5em;
 }
-.js #complimentary dd {
-	margin-left:.5em;
+#symphonies dt:first-child {
+	margin-top:0;
 }
-.js #complimentary dd.opus:before {
+#symphonies dd:before {
+	float:left;
+	display:block;
+	content:'';
+	color:#444444;
+	margin-right:1em;
+	width:3em;
+}
+#symphonies dd.opus:before {
 	content:'Opus';
 }
-.js #complimentary dd.tone:before {
+#symphonies dd.tone:before {
 	content:'Tone';
 }
-.js #complimentary dd.year:before {
+#symphonies dd.year:before {
 	content:'Year';
 }
 
-/* Navigation is active */
-.active-nav #navigation {
-	margin-left:0;
-	width:80%;
-}
-.active-nav #main {
-	margin-right:-100%;
-}
-.active-nav #complimentary {
-	margin-right:-200%;
-	float:right;
-}
-
-/* Sidebar is active */
-.active-sidebar #navigation {
-	margin-left:-200%;
-}
-.active-sidebar #main {
-	margin-left:-90%;
-}
-.active-sidebar #complimentary {
-	float:left;
-	margin-left:0;
-	width:80%;
-}
-
-/* Page Navigation */
-#navigation-top {
-	overflow:hidden;
-	display:block;
-}
-#navigation-top ul {
-	float:left;
-	margin:0; padding:0;
+#navigation ul {
 	list-style:none;
-	background-color:#90916F;
-	border-bottom:1px solid #0F0E13;
-	width:100%;
+	margin:0; padding:0;
 }
-#navigation-top ul li {
-	display:block;
-	float:left;
-	max-width:40%;
-	margin:0;padding:0;
-}
-#navigation-top ul li.sidebar-item {
-	float:right;
-}
-#navigation-top a {
-	display:block;
-	padding:.5em 1em;
-	color:#0F0E13;
-	background-color:#90916F;
-}
-.active-nav #navigation-top .navigation-item a,
-.active-sidebar #navigation-top .sidebar-item a {
+#navigation li {
+	margin:4px 0;
+	padding:4px 0;
 }
 
+.page-navigation a,
+#navigation ul a {
+	text-decoration:none;
+}
+.page-navigation a:hover, .page-navigation a:active, .page-navigation a:focus,
+#navigation ul a:hover, #navigation ul a:active, #navigation a:focus {
+	text-decoration:underline;
+	outline:none;
+}
 
 /**
- * Medium width screens (netbooks/tablets etc...) will render as a 2-column
- * layout.
+ * Layout for medium screen size. Utilize two-column layout.
  */
 @media screen and (min-width:600px) {
-	#header h1 {
-		padding:.25em 0 .25em .5em;
-	}
-	#header h1 .extended {
+	.header h1 .extended {
 		display:inline;
 	}
-	#navigation-top #navigation-button {
-		display:none;
+	.left {border-top:1px solid #90916F;}
+	.right {border:none;}
+
+	#symphonies dl {
+		font-size:.9em;
 	}
-	.js #navigation {
-		width:20%;
-		margin-left:0;
-	}
-	.js #main {
-		width:60%;
-		padding-bottom:10em;
-	}
-	.js #complimentary {
-		width:20%;
-	}
-	.active-sidebar #navigation {
-		margin-left:-100%;
-	}
-	.active-sidebar #main {
-		margin-left:0;
-	}
-	.active-sidebar #complimentary {
-		margin-right:-80%;
+	#symphonies dd {
+		font-size:.9em;
 	}
 }
 
-/**
- * Desktop screens with minimum 800px browser width (or IE) will render as a
- * 3-column layout.
+/** 
+ * Layout for large screen size. Utilize three-column layout.
  */
 @media screen and (min-width:800px) {
-	#navigation-top {
-		display:none;
-	}
-	.js #navigation {
-		width:19%;
-		margin-left:0;
-		padding:3%;
-	}
-	.js #main {
-		width:44%;
-		padding:3%;
-		padding-bottom:20em;
-	}
-	.js #complimentary {
-		width:19%;
-		padding:3%;
-		margin-right:0;
-		float:right;
-	}
-	.js #complimentary a {
-		float:none;
-		width:100%;
-		max-width:320px; height:399px;
-		background-image:url('../images/beethoven-320.jpg');
-		background-position-x:50%;
-	}
+	.totop {display:none;}
+	.left {border-top:none;}
 }

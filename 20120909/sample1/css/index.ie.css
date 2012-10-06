@@ -1,36 +1,16 @@
-/**
- * IE specific styles. This is a combination of the 600+ and 800+ screen width
- * specific media styles from index.css. We assume > 800px for IE.
- */
-.ie #header h1 {
-	padding:.25em 0 .25em .5em;
-	}
-.ie #header h1 .extended {
+@import url('layout.ie.css');
+
+.ie .header h1 .extended {
 	display:inline;
 }
-.ie #navigation-top {
-	display:none;
+
+.ie #symphonies dl {
+	font-size:.9em;
 }
-.ie .js #navigation {
-	width:19%;
-	margin-left:0;
-	padding:3%;
+.ie #symphonies dd {
+	font-size:.9em;
 }
-.ie .js #main {
-	width:44%;
-	padding:3%;
-	padding-bottom:20em;
-}
-.ie .js #complimentary {
-	width:19%;
-	padding:3%;
-	margin-right:0;
-	float:right;
-}
-.ie .js #complimentary a {
-	float:none;
-	width:100%;
-	max-width:320px; height:399px;
-	background-image:url('../images/beethoven-320.jpg');
-	background-position-x:50%;
-}
+
+.ie .totop {display:none;}
+.ie .left {border-top:none;}
+.ie .right {border:none;}
