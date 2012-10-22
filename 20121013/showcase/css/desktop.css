@@ -1,0 +1,62 @@
+#header {
+	padding:8px;
+	font-size:1.5em;
+	font-weight:bold;
+}
+#header #tomobile {
+	font-size:.5em;
+	font-weight:normal;
+	float:right;
+	display:none;
+}
+
+/* Gives mobile option to desktops with small screens */
+@media screen and (max-width:768px) {
+	#header #tomobile {
+		display:inline;
+	}
+}
+/* Gives option to mobile, who previously, tried desktop version */
+@media screen and (max-device-width:768px) {
+	#header #tomobile {
+		display:inline;
+	}
+}
+
+
+#events table {
+	margin:0;
+	padding:0;
+	border:none;
+	font-size:.95em;
+}
+#events table th {
+	text-align:left;
+}
+#events td {
+	vertical-align:top;
+	color:#333;
+}
+
+#events .big td {
+	color:#000;
+}
+#events .bigger td {
+	color:#000;
+	font-weight:bold;
+}
+#events .significant td {
+	color:#900;
+	font-weight:bold;
+}
+
+#events .region a, #events .region span {
+	display:block;
+}
+#events .region a {
+	
+}
+#events .region span {
+	font-size:.9em;
+	color:#666;
+}

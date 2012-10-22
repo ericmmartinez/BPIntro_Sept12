@@ -1,0 +1,13 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} ^/(.*)/event/js/([^/]+)$
+RewriteRule ^(.+)$ /%1/js/%2 [L,PT]
+
+RewriteCond %{REQUEST_URI} ^/(.*)/event/css/([^/]+)$
+RewriteRule ^(.+)$ /%1/css/%2 [L,PT]
+
+RewriteCond %{REQUEST_URI} ^/(.*)/event/images/([^/]+)$
+RewriteRule ^(.+)$ /%1/images/%2 [L,PT]
+
+RewriteCond %{REQUEST_URI} ^/(.*)/event/([^/]+)$
+RewriteRule ^(.+)$ /%1/event.php?id=%2 [L,PT]

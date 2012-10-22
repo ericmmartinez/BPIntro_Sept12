@@ -1,0 +1,95 @@
+html, body {margin:0;padding:0;}
+body {padding-top:40px;}
+
+header {
+	display:block;
+	position:fixed;
+	top:0; left:0; right:0;
+	background-color:#fff;
+	border-bottom:1px solid #333;
+	height:24px;
+	font-size:1.5em;
+	font-weight:bold;
+	padding:8px;
+}
+header #todesktop {
+	font-size:.5em;
+	font-weight:normal;
+	float:right;
+	margin-top:.5em;
+}
+
+#events .big {
+	color:#000;
+}
+#events .bigger {
+	color:#000;
+	font-weight:bold;
+}
+#events .significant {
+	color:#900;
+	font-weight:bold;
+}
+
+
+#events ol {
+	list-style:none;
+	margin:0; padding:0;
+}
+#events ol li {
+	margin:0; padding:.25em;
+	border-bottom:1px solid #ccc;
+	color:#333;
+	background-color:#eee;
+	background-image:-webkit-linear-gradient(bottom, #fff, #eee);
+	background-image:   -moz-linear-gradient(bottom, #fff, #eee);
+	background-image:    -ms-linear-gradient(bottom, #fff, #eee);
+	background-image:     -o-linear-gradient(bottom, #fff, #eee);
+	background-image:        linear-gradient(bottom, #fff, #eee);
+}
+
+#events .quantity,
+#events .location {
+	display:block;
+	margin:0; padding:0;
+}
+#events .quantity {
+	width:75px;
+	margin-right:15px;
+	float:left;
+}
+#events .location {
+	margin-left:90px;
+}
+
+#events .quantity > div {
+	display:block;
+	text-align:center;
+	font-size:1.5em;
+	margin-top:10px;
+}
+#events .quantity > div > span {
+	display:block;
+	margin:0 auto;padding:0;
+}
+
+#events .location > a,
+#events .location > span {
+	display:block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+#events .location .time,
+#events .location .coords {
+	font-size:.95em;
+	color:#666;
+}
+#events .location .coords {
+	font-style:italic;
+	color:#999;
+}
+
+footer {
+	padding:6px 0;
+}

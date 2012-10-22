@@ -1,0 +1,20 @@
+.pager .alert-pending {
+	background-color: #FFF;
+	color: #000;
+}
+.losspager .alert-green {
+	background-color:#00b04f !important;
+	color: #fff !important;
+}
+.losspager .alert-yellow {
+	background-color: #ff0 !important;
+	color: #000 !important;
+}
+.losspager .alert-orange {
+	background-color: #f90 !important;
+	color: #000 !important;
+}
+.losspager .alert-red {
+	background-color: #f00 !important;
+	color: #fff !important;
+}
