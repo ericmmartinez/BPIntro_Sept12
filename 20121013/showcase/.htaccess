@@ -1,5 +1,15 @@
 RewriteEngine On
 
+# Serve minified files
+RewriteCond %{REQUEST_URI} ^/(.*)/([^/]+).css$
+RewriteCond %{DOCUMENT_ROOT}/%1/%2.min.css -f
+RewriteRule ^(.+)$ /%1/%2.min.css [PT]
+
+RewriteCond %{REQUEST_URI} ^/(.*)/([^/]+).js$
+RewriteCond %{DOCUMENT_ROOT}/%1/%2.min.js -f
+RewriteRule ^(.+)$ /%1/%2.min.js [PT]
+
+# Break out of event jail
 RewriteCond %{REQUEST_URI} ^/(.*)/event/js/([^/]+)$
 RewriteRule ^(.+)$ /%1/js/%2 [L,PT]
 
@@ -9,5 +19,6 @@ RewriteRule ^(.+)$ /%1/css/%2 [L,PT]
 RewriteCond %{REQUEST_URI} ^/(.*)/event/images/([^/]+)$
 RewriteRule ^(.+)$ /%1/images/%2 [L,PT]
 
+# Clean URLs for events
 RewriteCond %{REQUEST_URI} ^/(.*)/event/([^/]+)$
 RewriteRule ^(.+)$ /%1/event.php?id=%2 [L,PT]
