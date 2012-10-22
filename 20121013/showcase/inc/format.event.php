@@ -88,9 +88,13 @@ function getEventCommentary ($event) {
 	if (isset($products['tectonic-summary'])) {
 		$tectonic_product = $products['tectonic-summary'][0];
 		$file = $tectonic_product['contents']['tectonic-summary.inc.html'];
-		$tectonic = '<h3>Tectonic Summary</h3><article>' .
-				preg_replace('/<img[^>]+\/>/','',file_get_contents($file['url'])) .
-				'</article>';
+		$tectonic = @file_get_contents($file['url']);
+		if ($tectonic === false) {
+			$tectonic = '<a href="' . $file['url'] . '">Tectonic Summary</a>';
+		} else {
+			$tectonic = '<h3>Tectonic Summary</h3><article>' .
+				preg_replace('/<img[^>]+\/>/', '', $tectonic) . '</article>';
+		}
 	}
 
 	return $tectonic;

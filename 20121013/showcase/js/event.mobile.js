@@ -35,13 +35,20 @@ var onLinkClicked = function (click_event) {
 var createRelatedImage = function (link) {
 	var img = document.createElement('img');
 	img.style.display = 'none';
-	img.className = 'imagetarget';
 	img.width = '' + IMAGE_WIDTH;
+
 	img.src = 'images/resize.php?width=' + IMAGE_WIDTH + 
 			'&url=' + encodeURIComponent(link.getAttribute('href'));
 	
+	img.link = link;
+	img.onload = attachImage;
+
 	link.parentNode.appendChild(img);
 	return img;
+};
+
+var attachImage = function (load_event) {
+	this.className = 'imagetarget';
 };
 
 window.onload = initialize;

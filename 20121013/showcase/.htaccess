@@ -10,15 +10,43 @@ RewriteCond %{DOCUMENT_ROOT}/%1/%2.min.js -f
 RewriteRule ^(.+)$ /%1/%2.min.js [PT]
 
 # Break out of event jail
-RewriteCond %{REQUEST_URI} ^/(.*)/event/js/([^/]+)$
-RewriteRule ^(.+)$ /%1/js/%2 [L,PT]
+RewriteCond %{REQUEST_URI} ^/(.*)/event/js(\d)?/([^/]+)$
+RewriteRule ^(.+)$ /%1/js%2/%3 [L,PT]
 
-RewriteCond %{REQUEST_URI} ^/(.*)/event/css/([^/]+)$
-RewriteRule ^(.+)$ /%1/css/%2 [L,PT]
+RewriteCond %{REQUEST_URI} ^/(.*)/event/css(\d)?/([^/]+)$
+RewriteRule ^(.+)$ /%1/css%2/%3 [L,PT]
 
-RewriteCond %{REQUEST_URI} ^/(.*)/event/images/([^/]+)$
-RewriteRule ^(.+)$ /%1/images/%2 [L,PT]
+RewriteCond %{REQUEST_URI} ^/(.*)/event/images(\d)?/([^/]+)$
+RewriteRule ^(.+)$ /%1/images%2/%3 [L,PT]
 
 # Clean URLs for events
 RewriteCond %{REQUEST_URI} ^/(.*)/event/([^/]+)$
 RewriteRule ^(.+)$ /%1/event.php?id=%2 [L,PT]
+
+AddOutputFilterByType DEFLATE text/javascript
+AddOutputFilterByType DEFLATE text/css
+
+<Files *.html>
+	SetOutputFilter DEFLATE
+	Header set Cache-Control "max-age=604800, must-revalidate, proxy-revalidate"
+	FileETag MTime Size
+</Files>
+
+<Files *.css>
+	SetOutputFilter DEFLATE
+</Files>
+
+<Files *.js>
+	SetOutputFilter DEFLATE
+</Files>
+
+<Files ajax/*.php>
+	SetOutputFilter DEFLATE
+</Files>
+
+<FilesMatch ".(js|css)$">
+	Header set Expires "Thu, 15 Apr 2040 20:00:00 GMT"
+	#max-age is set in seconds
+	Header set Cache-Control "max-age=2678400, must-revalidate, proxy-revalidate"
+	FileETag MTime Size
+</FilesMatch>

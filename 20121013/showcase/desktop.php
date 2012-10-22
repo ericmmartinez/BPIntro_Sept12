@@ -8,7 +8,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
 	<!-- CSS goes here -->
-	<link rel="stylesheet" href="css/desktop.css"/>
+	<link rel="stylesheet" href="css1/desktop.css"/>
 
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
 </head>
@@ -75,7 +75,7 @@
 	</footer>
 
 	<!--[if !IE]><!-->
-		<script src="js/desktop.js"></script>
+		<script src="js1/desktop.js"></script>
 	<!--<![endif]-->
 </body>
 </html>
