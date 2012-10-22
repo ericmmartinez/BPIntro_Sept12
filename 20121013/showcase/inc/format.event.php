@@ -89,6 +89,13 @@ function getEventCommentary ($event) {
 		$tectonic_product = $products['tectonic-summary'][0];
 		$file = $tectonic_product['contents']['tectonic-summary.inc.html'];
 		$tectonic = @file_get_contents($file['url']);
+
+		if ($tectonic === false) {
+			// Try a cache instead
+			$tectonic = @file_get_contents(str_replace('earthquake.usgs.gov',
+					'ehpcache-den.cr.usgs.gov', $file['url']));
+		}
+
 		if ($tectonic === false) {
 			$tectonic = '<a href="' . $file['url'] . '">Tectonic Summary</a>';
 		} else {
