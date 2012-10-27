@@ -1,8 +1,8 @@
 html, body {margin:0;padding:0;}
 body {padding-top:40px;}
+header, section, footer {display:block;}
 
 header {
-	display:block;
 	position:fixed;
 	top:0; left:0; right:0;
 	background-color:#fff;
@@ -15,7 +15,6 @@ header {
 header #todesktop {
 	font-size:.5em;
 	font-weight:normal;
-	float:right;
 	margin-top:.5em;
 }
 
@@ -56,10 +55,8 @@ header #todesktop {
 #events .quantity {
 	width:75px;
 	margin-right:15px;
-	float:left;
 }
 #events .location {
-	margin-left:90px;
 }
 
 #events .quantity > div {
@@ -92,4 +89,16 @@ header #todesktop {
 
 footer {
 	padding:6px 0;
+}
+
+@media screen and (min-width:320px) {
+	header #todesktop {
+		float:right;
+	}
+	.quantity {
+		float:left;
+	}
+	.location {
+		margin-left:90px;
+	}
 }

@@ -1,3 +1,4 @@
+header, section, footer {display:block;}
 #header {
 	padding:8px;
 	font-size:1.5em;
@@ -6,23 +7,7 @@
 #header #tomobile {
 	font-size:.5em;
 	font-weight:normal;
-	float:right;
-	display:none;
 }
-
-/* Gives mobile option to desktops with small screens */
-@media screen and (max-width:768px) {
-	#header #tomobile {
-		display:inline;
-	}
-}
-/* Gives option to mobile, who previously, tried desktop version */
-@media screen and (max-device-width:768px) {
-	#header #tomobile {
-		display:inline;
-	}
-}
-
 
 #events table {
 	margin:0;
@@ -59,4 +44,10 @@
 #events .region span {
 	font-size:.9em;
 	color:#666;
+}
+
+@media screen and (min-width:320px) {
+	#header #tomobile {
+		float:right;
+	}
 }

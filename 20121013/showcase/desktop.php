@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="ie ie8" lang="en"> <![endif]-->
+<!--[if lte IE 8]>     <html class="ie" lang="en"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en">         <!--<![endif]-->
 <head>
 	<title>Recent Earthquakes</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta charset="UTF-8"/>
 
 	<!-- CSS goes here -->
-	<link rel="stylesheet" href="css1/desktop.css"/>
+	<link rel="stylesheet" href="css3/desktop.css"/>
 
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
 </head>
@@ -75,7 +73,7 @@
 	</footer>
 
 	<!--[if !IE]><!-->
-		<script src="js1/desktop.js"></script>
+		<script src="js3/desktop.js"></script>
 	<!--<![endif]-->
 </body>
 </html>

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="ie ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en">         <!--<![endif]-->
+<html lang="en">
 <head>
 	<?php
 		$as_include_file = true;
@@ -25,11 +22,11 @@
 		}
 	?>
 
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta charset="UTF-8"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
 	<!-- CSS goes here -->
-	<link rel="stylesheet" href="css1/event.css"/>
+	<link rel="stylesheet" href="css3/event.css"/>
 
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
 </head>
@@ -63,9 +60,9 @@
    		$detect = new Mobile_Detect();
 
    		if ($detect->isMobile()) {
-      		print '<script src="js1/event.mobile.js"></script>';
+      		print '<script src="js3/event.mobile.js"></script>';
    		}/** / else {
-				print '<script src="js1/event.mobile.js"></script>';
+				print '<script src="js3/event.mobile.js"></script>';
    		}/**/
 		} /* END: if ($event) */
 	?>

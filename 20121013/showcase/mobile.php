@@ -1,15 +1,12 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie6" lang="en"> <![endif]-->
-<!--[if IE 7]>         <html class="ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>         <html class="ie8" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en">         <!--<![endif]-->
+<html lang="en">
 <head>
 	<title>Recent Earthquakes</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<meta charset="UTF-8"/>
 
 	<!-- CSS goes here -->
-	<link rel="stylesheet" href="css1/mobile.css"/>
+	<link rel="stylesheet" href="css3/mobile.css"/>
 
 	<!--[if lt IE 9]><script src="/js/html5shiv.js"></script><![endif]-->
 </head>

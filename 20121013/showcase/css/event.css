@@ -9,6 +9,8 @@ header, .impact, .commentary, .footer {
 	clear:left;
 }
 
+header, section, footer, article {display:block;}
+
 header {
 	font-size:1.5em;
 	font-weight:bold;
@@ -55,7 +57,10 @@ header .coords {
 }
 
 .commentary {
-	max-width:800px;
+	max-width:600px;
+}
+.commentary article p {
+	line-height:1.25;
 }
 
 /* Just for desktop */
